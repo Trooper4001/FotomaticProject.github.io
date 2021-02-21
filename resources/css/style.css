@@ -37,7 +37,7 @@ html {
 /* Header */
 
 header {
-  position: fixed;
+  position: relative;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
 }
@@ -46,6 +46,8 @@ header .content {
   display: flex;
   align-items: center;
   padding: 1.875rem;
+  position: relative;
+  z-index: 1;
 }
 
 header .logo {
@@ -348,15 +350,18 @@ header .mobile {
 
 #quotes-section quote {
   padding-right: 1.875rem;
-  font-family: "Palatino", serif;
+  font-family: "Palatino-Italic", serif;
   font-size: 1.875rem;
   line-height: 1.1;
   font-style: italic;
   color: #4a4a4a;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 #quotes-section quote-citation {
   height: 1.875rem;
+  margin-left: 30px;
 }
 
 @media only screen and (max-width: 760px) {
