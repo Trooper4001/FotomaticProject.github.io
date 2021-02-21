@@ -391,7 +391,7 @@ footer .content {
   color: white;
   background-color: #9B9B9B;
   display: flex;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 footer .copyright {
