@@ -5,6 +5,11 @@ html {
   font-size: 16px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
@@ -18,6 +23,7 @@ html {
   border-radius: 4px;
   background-color: #4a4a4a;
   color: white;
+  font-family: Roboto-Medium;
 }
 
 .image-container {
@@ -39,24 +45,28 @@ html {
 header {
   position: relative;
   width: 100%;
-  border-bottom: solid 1px #c6c1c1;
 }
 
 header .content {
   display: flex;
   align-items: center;
-  padding: 1.875rem;
-  font-family: Roboto-Regular, serif;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  font-family: Roboto-Regular, sans-serif;
   position: fixed;
   z-index: 1;
   top: 0;
   width: 100%;
   height: 85px;
+  background-color: white;
+  border-bottom: solid 1px #c6c1c1;
 }
 
 header .logo {
   flex: 1;
-  
+  text-decoration: none;
+  font-size: 2rem;
+  color: #4a4a4a;
 }
 
 header nav ul {
@@ -64,7 +74,8 @@ header nav ul {
 }
 
 nav li {
-  padding-left: 3.5rem;
+  padding: 3.5rem;
+  list-style-type: none;  
 }
 
 nav a {
@@ -72,6 +83,7 @@ nav a {
   line-height: 1.6;
   font-size: 1rem;
   color: #4a4a4a;
+  text-decoration: none;
 }
 
 header .icon {
@@ -118,6 +130,44 @@ header .mobile {
   }
 }
 
+/* Font Face*/
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* Sign Up Section */
 
 #sign-up-section {
@@ -125,10 +175,15 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image: url("../images/banner-landingpage.jpg");
+  background-size: cover;
 }
 
 #sign-up-cta {
-  padding: 0 5rem 2.5rem 5rem;
+  margin-top: 170px;
+  margin-left: 100px;
+  margin-bottom: 170px;
+  padding: 0 5rem 3.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
@@ -137,7 +192,7 @@ header .mobile {
 #sign-up-cta .content {
   width: 25.625rem;
   margin-top: 2rem;
-  font-family: "Roboto", sans-serif;
+  margin-bottom: 0;
   font-size: 1.25rem;
   line-height: 1.4;
   color: white;
@@ -157,11 +212,15 @@ header .mobile {
 
 #sign-up-cta .cursive {
   font-family: "Damion", cursive;
+  margin-top: 32px;
+  margin-bottom: 0;
 }
 
 #sign-up-cta .striking {
   font-family: "Rubik", sans-serif;
+  font-size: 50px;
   padding-bottom: .75rem;
+  margin: 0;
 }
 
 #sign-up-cta .button {
@@ -383,7 +442,6 @@ header .mobile {
 
 footer {
   background-color: #9b9b9b;
-  padding: 1.5rem 2rem;
   font-family: Roboto-Regular, serif;
   position: relative;
   bottom: 0;
@@ -394,7 +452,8 @@ footer .content {
   color: white;
   background-color: #9B9B9B;
   display: flex;
-  font-size: 0.75rem;
+  font-size: 12px;
+  padding: 31px 32px;
 }
 
 footer .copyright {
